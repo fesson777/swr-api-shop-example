@@ -10,7 +10,7 @@ import {
 } from '@chakra-ui/react'
 import type { IProduct } from './Product'
 import Product from './Product'
-import useSWR from 'swr'
+import useSWR from 'swr/immutable' // без лишних запросов к product
 import { fetcher } from '../helpers/fetcher'
 
 export default function ProductList() {
@@ -18,8 +18,6 @@ export default function ProductList() {
     'http://localhost:3004/products',
     fetcher
   )
-
-  console.log(data)
 
   return (
     <Stack>

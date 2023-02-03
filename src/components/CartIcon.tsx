@@ -1,4 +1,4 @@
-import { HamburgerIcon } from '@chakra-ui/icons'
+import { CalendarIcon } from '@chakra-ui/icons'
 import {
   Drawer,
   DrawerBody,
@@ -29,7 +29,7 @@ export default function CartIcon() {
         top="2"
         aria-label="open-cart"
         onClick={onOpen}
-        icon={<HamburgerIcon />}
+        icon={<CalendarIcon />}
         _after={{
           content: `"${(data && data.length) || ''}"`,
           position: 'absolute',
